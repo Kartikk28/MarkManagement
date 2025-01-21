@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.MarkManagement.HelloController">
+
+    <Label text="Mark Management System" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Student Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Student ID:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="idField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Marks:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="marksField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Button text="Add Student" onAction="#onAddStudentClick" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <TableView fx:id="studentTable" prefHeight="200">
+        <columns>
+            <TableColumn text="Name" fx:id="nameColumn"/>
+            <TableColumn text="Student ID" fx:id="idColumn"/>
+            <TableColumn text="Marks" fx:id="marksColumn"/>
+        </columns>
+    </TableView>
+</VBox>
